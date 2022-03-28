@@ -1,6 +1,12 @@
 # Infinite loader
 
-Get the component and include it with the Alpinejs and Htmx libs in your html:
+Get the component:
+
+```bash
+wget https://raw.githubusercontent.com/emencia/alpinebricks/master/dist/components/infinite_loader/infinite_loader.min.js
+```
+
+Include the Alpinejs and Htmx libs in your html:
 
 ```html
   <script type="text/javascript" src="https://unpkg.com/@alpinejs/intersect@3.9.1/dist/cdn.min.js" defer></script>
