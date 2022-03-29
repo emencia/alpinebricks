@@ -19,10 +19,11 @@
       <a class="navbar-brand" href="/index.html">Alpine bricks: Infinite loader placeholder version</a>
     </div>
   </nav>
-  <script src="/dist/components/infinite_loader/infinite_loader.min.js"></script>
+  <script src="/dist/index.min.js"></script>
   <div class="container">
     <div id="content"></div>
-    <div x-data x-intersect.throttle.1000ms="$loader.loadMore('/pages/infinite_loader/partial.html', '#content')"></div>
+    <div x-data x-intersect.throttle.1000ms="$loader.loadMore('/pages/infinite_loader/partial.html', '#content', 5000)">
+    </div>
     <div x-show="$loader.isLoading">
       <div class="mt-2 row row-cols-3 g-3 placeholder-glow">
         <div class="col">

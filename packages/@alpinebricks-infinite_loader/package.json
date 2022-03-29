@@ -1,11 +1,7 @@
 {
-  "name": "alpinebricks",
-  "version": "0.1.0",
-  "description": "",
-  "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
+  "name": "@alpinebricks/infiniteloader",
+  "version": "0.0.1",
+  "description": "An infinite loader component for Alpinejs",
   "scripts": {
     "build": "rollup -c && tsc",
     "watch": "rollup -c -w"
@@ -26,5 +22,17 @@
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.3.1",
     "typescript": "^4.5.5"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.min.js",
+  "module": "./dist/main.es.js",
+  "types": "./dist/main.es.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/main.es.js",
+      "require": "./dist/index.min.js"
+    }
   }
 }

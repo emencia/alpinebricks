@@ -1,6 +1,5 @@
 function create(isDebug = false): typeof Alpine.store {
   Alpine.store('infiniteLoader', {
-    user: "",
     isLoading: false,
     nLoads: 0,
     hxget(url: string, destination: string) {
@@ -9,16 +8,20 @@ function create(isDebug = false): typeof Alpine.store {
     sleep(ms: number) {
       return new Promise(resolve => setTimeout(resolve, ms));
     },
-    async loadMore(url: string, dest: string) {
+    async loadMore(url: string, dest: string, delay?: number) {
       if (this.isLoading) {
-        console.log("Already loading data")
+        if (isDebug) {
+          console.log("Already loading data")
+        }
         return
       }
       ++this.nLoads;
       this.isLoading = true;
       if (isDebug) {
         console.log("Load more", this.nLoads)
-        await this.sleep(5000)
+      }
+      if (delay) {
+        await this.sleep(delay)
       }
       await htmx.ajax('GET', url, { target: dest, swap: 'beforeend' });
       this.isLoading = false;

@@ -4,4 +4,4 @@ Reusable Alpinejs components
 
 | Name | Description |
 | --- | --- |
-| [Infinite loader](doc/infinite_loader) | Infinite loader utility |
+| [Infinite loader](packages/%40alpinebricks-infinite_loader/) | Infinite loader utility |
