@@ -15,10 +15,15 @@
     "noEmit": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "outDir": "./dist",
   },
   "include": [
     "src"
+  ],
+  "types": [
+    "vite/client",
+    "node"
   ],
   "baseUrl": ".",
   "paths": {
