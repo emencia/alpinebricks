@@ -1,11 +1,5 @@
 # Infinite loader
 
-Get the component:
-
-```bash
-wget https://raw.githubusercontent.com/emencia/alpinebricks/master/packages/@alpinebricks-infiniteloader/dist/index.min.js
-```
-
 Include the Alpinejs and Htmx libs in your html:
 
 ```html
@@ -17,7 +11,7 @@ Include the Alpinejs and Htmx libs in your html:
 Include the component:
 
 ```html
-  <script src="/static/infinite_loader/index.min.js"></script>
+  <script src="https://unpkg.com/@alpinebricks/infiniteloader@0.0.1/dist/index.min.js"></script>
 ```
 
 Initialize it:
