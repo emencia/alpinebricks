@@ -2,6 +2,7 @@
   "name": "@alpinebricks/infiniteloader",
   "version": "0.0.1",
   "description": "An infinite loader component for Alpinejs",
+  "repository": "https://github.com/emencia/alpinebricks",
   "scripts": {
     "build": "rollup -c && tsc",
     "watch": "rollup -c -w"
@@ -26,6 +27,10 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "main": "./dist/index.min.js",
   "module": "./dist/main.es.js",
   "types": "./dist/main.es.d.ts",
