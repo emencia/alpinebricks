@@ -27,7 +27,7 @@ export default [
         sourceMap: false,
         ignoreGlobal: false
       }),
-      //isProduction && terser({ format: { comments: false } }),
+      isProduction && terser({ format: { comments: false } }),
       !isProduction && serve() && livereload({ watch: ['src', 'index.html'] }),
     ],
   },
@@ -44,7 +44,7 @@ export default [
         main: true,
         browser: true,
       }),
-      //isProduction && terser({ format: { comments: false } }),
+      isProduction && terser({ format: { comments: false } }),
     ],
   },
 ]
