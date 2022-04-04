@@ -1,0 +1,16 @@
+{
+  "name": "tests",
+  "version": "0.0.1",
+  "description": "End to end tests for Alpinebricks",
+  "repository": "https://github.com/emencia/alpinebricks.git",
+  "author": "synw",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "npx playwright test",
+    "testdev": "npx playwright test --project=chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.20.1"
+  }
+}
