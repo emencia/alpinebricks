@@ -1,6 +1,6 @@
 {
   "name": "@alpinebricks/knob",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An knob ring gauge widget for Alpinejs",
   "repository": "https://github.com/emencia/alpinebricks",
   "scripts": {
@@ -32,11 +32,11 @@
     "registry": "https://registry.npmjs.org/"
   },
   "main": "./dist/index.min.js",
-  "module": "./dist/index.es.min.js",
+  "module": "./dist/index.es.js",
   "types": "./dist/main.es.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.es.min.js",
+      "import": "./dist/index.es.js",
       "require": "./dist/index.min.js"
     }
   }

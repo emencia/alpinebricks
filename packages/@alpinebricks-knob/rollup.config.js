@@ -34,7 +34,7 @@ export default [
   {
     input: 'src/main.es.ts',
     output: {
-      file: 'dist/index.es.min.js',
+      file: 'dist/index.es.js',
       format: 'es',
     },
     plugins: [
@@ -44,7 +44,7 @@ export default [
         main: true,
         browser: true,
       }),
-      isProduction && terser({ format: { comments: false } }),
+      //isProduction && terser({ format: { comments: false } }),
     ],
   },
 ]
