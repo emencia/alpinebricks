@@ -1,0 +1,14 @@
+<script type="text/javascript" src="https://unpkg.com/alpinejs@3.9.1/dist/cdn.min.js" defer></script>
+<script src="https://unpkg.com/@alpinebricks/knob@0.0.1/dist/index.min.js"></script>
+<script>
+  var $knob
+  document.addEventListener('alpine:init', () => {
+    $knob = $knobRing.create();
+  });
+</script>
+<style>
+  [x-cloak] {
+    display: none !important;
+  }
+
+</style>

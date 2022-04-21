@@ -1,0 +1,28 @@
+{
+  "name": "mhdesign",
+  "version": "1.0.0",
+  "description": "Storybook for MH Academy design system",
+  "private": true,
+  "scripts": {
+    "build": "build-storybook -c .storybook -o build",
+    "storybook": "start-storybook",
+    "test": "htmlhint \"src/**/*.html\" && stylelint \"src/**/*.css\" && eslint \"src/**/*.js\""
+  },
+  "keywords": [],
+  "author": "Leon Machens",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@storybook/addon-console": "^1.2.3",
+    "@storybook/addon-notes": "^5.3.21",
+    "@storybook/addon-viewport": "^6.4.22",
+    "@storybook/html": "^6.3.9",
+    "@whitespace/storybook-addon-html": "^5.0.0",
+    "babel-loader": "^8.2.2"
+  },
+  "dependencies": {
+    "@alpinebricks/knob": "^0.0.1",
+    "@storybook/addon-essentials": "^6.4.22",
+    "alpinejs": "^3.10.2"
+  }
+}
