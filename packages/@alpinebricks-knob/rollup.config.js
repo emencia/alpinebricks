@@ -32,6 +32,28 @@ export default [
     ],
   },
   {
+    input: 'src/store.ts',
+    output: {
+      file: 'dist/index.js',
+      format: 'iife',
+      name: '$knobRing',
+    },
+    plugins: [
+      typescript(),
+      resolve({
+        jsnext: true,
+        main: true,
+        browser: true,
+      }),
+      commonjs({
+        extensions: ['.js'],
+        sourceMap: false,
+        ignoreGlobal: false
+      }),
+      !isProduction && serve() && livereload({ watch: ['src', 'index.html'] }),
+    ],
+  },
+  {
     input: 'src/main.es.ts',
     output: {
       file: 'dist/index.es.js',

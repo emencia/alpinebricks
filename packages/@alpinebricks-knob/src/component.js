@@ -77,6 +77,7 @@ class KnobRing extends HTMLElement {
           }
         </style>
       `;
+    this.setProgress(this._progress);
     this.setReady(true);
   }
 
