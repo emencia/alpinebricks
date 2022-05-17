@@ -1,6 +1,10 @@
+var setReady;
+
 class KnobRing extends HTMLElement {
   setReady = (p) => null;
-  isReady = new Promise((r) => r = this.setReady);
+  isReady = new Promise((r) => {
+    setReady = r
+  });
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -78,7 +82,7 @@ class KnobRing extends HTMLElement {
         </style>
       `;
     this.setProgress(this._progress);
-    this.setReady(true);
+    setReady(true);
   }
 
   setProgress(percent) {

@@ -1,6 +1,6 @@
 {
   "name": "@alpinebricks/knob",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An knob ring gauge widget for Alpinejs",
   "repository": "https://github.com/emencia/alpinebricks",
   "scripts": {

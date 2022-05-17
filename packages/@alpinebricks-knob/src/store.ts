@@ -1,24 +1,23 @@
 import { KnobRing } from "./component"
 
 interface KnobStoreParams {
-  progress: number;
+  progress?: number;
   color?: string;
   bg?: string;
   colorFunc?: (v: number) => string;
 }
 
-function create(params: KnobStoreParams = {
-  progress: 0,
-  color: "green",
-  bg: "lightgrey",
-} as KnobStoreParams): typeof Alpine.store {
+function create(params: KnobStoreParams): typeof Alpine.store {
   Alpine.store('knobRing', {
     progress: params.progress,
     //color: color,
     bg: params.bg,
     init() {
+      this.progress = params?.progress ?? 0;
+      this.bg = params?.bg ?? "lightgrey";
+      this.color = params?.color ?? "green"
       if (params.colorFunc) {
-        this.color = params.colorFunc(params.progress ?? 0)
+        this.color = params.colorFunc(this.progress)
       }
     },
     animate(p: number) {

@@ -1,9 +1,13 @@
 var $knobRing = (function (exports) {
   'use strict';
 
+  var setReady;
+
   class KnobRing extends HTMLElement {
     setReady = (p) => null;
-    isReady = new Promise((r) => this.setReady);
+    isReady = new Promise((r) => {
+      setReady = r;
+    });
     constructor() {
       super();
       this.attachShadow({ mode: 'open' });
@@ -81,7 +85,7 @@ var $knobRing = (function (exports) {
         </style>
       `;
       this.setProgress(this._progress);
-      this.setReady(true);
+      setReady(true);
     }
 
     setProgress(percent) {
@@ -121,19 +125,18 @@ var $knobRing = (function (exports) {
     }
   }
 
-  function create(params = {
-      progress: 0,
-      color: "green",
-      bg: "lightgrey",
-  }) {
+  function create(params) {
       Alpine.store('knobRing', {
           progress: params.progress,
           //color: color,
           bg: params.bg,
           init() {
-              var _a;
+              var _a, _b, _c;
+              this.progress = (_a = params === null || params === void 0 ? void 0 : params.progress) !== null && _a !== void 0 ? _a : 0;
+              this.bg = (_b = params === null || params === void 0 ? void 0 : params.bg) !== null && _b !== void 0 ? _b : "lightgrey";
+              this.color = (_c = params === null || params === void 0 ? void 0 : params.color) !== null && _c !== void 0 ? _c : "green";
               if (params.colorFunc) {
-                  this.color = params.colorFunc((_a = params.progress) !== null && _a !== void 0 ? _a : 0);
+                  this.color = params.colorFunc(this.progress);
               }
           },
           animate(p) {
