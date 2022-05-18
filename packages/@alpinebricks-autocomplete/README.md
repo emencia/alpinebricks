@@ -11,16 +11,16 @@ Include the Alpinejs lib in your html:
 Include the component:
 
 ```html
-  <script src="https://unpkg.com/@alpinebricks/autocomplete@0.0.1/dist/index.min.js"></script>
+  <script src="https://unpkg.com/@alpinebricks/autocomplete@0.0.2/dist/index.min.js"></script>
 ```
 
 Initialize it:
 
 ```html
 <script>
-var $autocomplete;
+var $ac;
 document.addEventListener('alpine:init', () => {
-  $autocomplete = $autocomplete.create();
+  $ac = $autocomplete.create();
 });
 </script>
 ```
@@ -30,11 +30,11 @@ Use it in html:
 ```html
 <div x-data>
   <input id="searchinput"
-    x-on:input.debounce.500="$autocomplete.search('http://localhost:8080/search.html', '#results','searchinput')"
-    x-model="$autocomplete.searchTerm" />
-  <div x-ref="resultsref" id="results"></div>
+    x-on:input.debounce.500="$ac.search('http://localhost:8080/search.html', '#results')"
+    x-model="$ac.searchTerm" />
+  <div id="results"></div>
   <div class="px-2 py-5 d-flex justify-content-center">
-    <div class="spinner-border" role="status" x-show="$autocomplete.isLoading">
+    <div class="spinner-border" role="status" x-show="$ac.isLoading">
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>
@@ -43,7 +43,7 @@ Use it in html:
 
 ## Methods
 
-- `search(url: string, destSelector: string, searchIdDest: string)`: run the search query
+- `search(url: string, destSelector: string)`: run the search query
 - `resetSearch(idDest: string))`: reset the search results area
 - `resetInput(idDest: string)`: reset the search input content
 - `resetAll(inputIdDest: string, searchIdDest: string)`: reset both search area and input

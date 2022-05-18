@@ -1,6 +1,6 @@
 {
   "name": "@alpinebricks/autocomplete",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An autocomplete engine for Alpinejs",
   "repository": "https://github.com/emencia/alpinebricks",
   "scripts": {

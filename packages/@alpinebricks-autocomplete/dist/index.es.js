@@ -1,9 +1,9 @@
 function create(isDebug = false) {
     Alpine.store('autocomplete', {
-        isLoading: false,
+        isLoading: null,
         searchTerm: "",
         get hasResults() {
-            return (this.searchTerm !== "") && (this.isLoading == false);
+            return (this.searchTerm !== "") && (this.isLoading !== true);
         },
         resetSearch(idDest) {
             const el = document.getElementById(idDest);
@@ -28,7 +28,7 @@ function create(isDebug = false) {
             this.resetInput(inputIdDest);
             this.resetSearch(searchIdDest);
         },
-        search(url, destSelector, searchIdDest) {
+        search(url, destSelector) {
             if (this.isLoading) {
                 if (isDebug) {
                     console.log("Already searching");
