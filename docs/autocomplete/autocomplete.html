@@ -31,7 +31,8 @@
         <div class="ms-2 me-auto">
           <div class="fw-bold">Autocomplete</div>
           <div x-data>
-            <input id="searchinput" x-on:input.debounce.500="$ac.search('/autocomplete/partial.html', '#results')"
+            <input id="searchinput"
+              x-on:input.debounce.500="$ac.search('/alpinebricks/autocomplete/partial.html', '#results')"
               x-model="$ac.searchTerm" />
             <div id="results"></div>
             <div class="px-2 py-5 d-flex justify-content-center">
