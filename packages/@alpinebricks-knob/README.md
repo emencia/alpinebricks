@@ -11,7 +11,7 @@ Include the Alpinejs lib in your html:
 Include the component:
 
 ```html
-  <script src="https://unpkg.com/@alpinebricks/knob@0.0.1/dist/index.min.js"></script>
+  <script src="https://unpkg.com/@alpinebricks/knob@0.0.4/dist/index.min.js"></script>
 ```
 
 Initialize it and animate to a given value when it displays:
