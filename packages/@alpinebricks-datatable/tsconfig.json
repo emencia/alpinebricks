@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es2020",
+    "strict": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": false,
+    "declarationMap": true,
+    "allowJs": true,
+    "declaration": true,
+    "baseUrl": ".",
+    "outDir": "dist",
+    "rootDir": "src",
+    "typeRoots": [
+      "src/global.d.ts"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "ES2020",
+      "dom",
+      "dom.iterable"
+    ],
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
